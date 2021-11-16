@@ -1,6 +1,31 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
 }
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+div.scrollmenu {
+  background-color: #333;
+  overflow: auto;
+  white-space: nowrap;
+}
+
+div.scrollmenu a {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 14px;
+  text-decoration: none;
+}
+
+div.scrollmenu a:hover {
+  background-color: #777;
+}
+</style>
+</head>
+
 
 <div class="text-center">
     <h1 class="display-4">Track Data</h1>
@@ -10,28 +35,27 @@
     <br />
 </div><!-- SPACING-->
 
-<div>
-	<div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-        <ul class="navbar-nav flex-grow-1">
-            <li class="nav-item">
-                <a style="font-weight: bold;" class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Lap 1   </a>
-            </li>
-        </ul>
-    </div>
-	<div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-        <ul class="navbar-nav flex-grow-1">
-            <li class="nav-item">
-                <a style="font-weight: bold;" class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Lap_2">Lap 2   </a>
-            </li>
-        </ul>
-    </div>
-    <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-        <ul class="navbar-nav flex-grow-1">
-            <li class="nav-item">
-                <a style="font-weight: bold;" class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Lap_3">Lap 3   </a>
-            </li>
-        </ul>
-    </div>
+<div class="scrollmenu">
+  <a style="font-weight: bold;" class="nav-link" asp-area="" asp-controller="Home" asp-action="Index">Lap 1</a>
+  <a style="font-weight: bold;" class="nav-link" asp-area="" asp-controller="Home" asp-action="Lap_2">Lap 2</a>
+  <a style="font-weight: bold;" class="nav-link" asp-area="" asp-controller="Home" asp-action="Lap_3">Lap 3</a>
+  <a href="#Lap4">Lap 4</a>
+  <a href="#Lap5">Lap 5</a>
+  <a href="#Lap6">Lap 6</a>
+  <a href="#Lap7">Lap 7</a>
+  <a href="#Lap8">Lap 8</a>
+  <a href="#Lap9">Lap 9</a>
+  <a href="#Lap10">Lap 10</a>
+  <a href="#Lap11">Lap 11</a>
+  <a href="#Lap12">Lap 12</a>
+  <a href="#Lap13">Lap 13</a>
+  <a href="#Lap14">Lap 14</a>
+  <a href="#Lap15">Lap 15</a>
+  <a href="#Lap16">Lap 16</a>
+  <a href="#Lap17">Lap 17</a>
+  <a href="#Lap18">Lap 18</a>
+  <a href="#Lap19">Lap 19</a>
+  <a href="#Lap20">Lap 20</a>
 </div>
 
 <div class="row">
