@@ -24,24 +24,19 @@ namespace AM_test_data.Controllers
 
         public IActionResult Index()
         {
-            ViewBag.LapSelectList = new SelectList(GetLap_Nums(), "Id", "lap_num");
-            
-            testing_front_df();
+            ConnectSQL("1");
             return View();
         }
 
-        private List<DropDownList> GetLap_Nums()
+        public IActionResult Lap_2()
         {
-            var lap_num = new List<DropDownList>();
-            lap_num.Add(new DropDownList() { Id = 1, lap_num = "Lap 1"});
-            lap_num.Add(new DropDownList() { Id = 2, lap_num = "Lap 2" });
-            lap_num.Add(new DropDownList() { Id = 3, lap_num = "Lap 3" });
+            ConnectSQL("2");
+            return View();
+        }
 
-            return lap_num;
-        } 
-
-        public IActionResult Privacy()
+        public IActionResult Lap_3()
         {
+            ConnectSQL("3");
             return View();
         }
 

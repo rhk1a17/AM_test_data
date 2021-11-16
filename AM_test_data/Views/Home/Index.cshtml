@@ -5,20 +5,36 @@
 <div class="text-center">
     <h1 class="display-4">Track Data</h1>
 </div>
-<div class="jumbotron">
-    <p id="title" class="lead">Speed Graph</p>
-</div>
 
 <div class="row">
     <br />
 </div><!-- SPACING-->
 
-<div>
-    @using (Html.BeginForm("Index", "Home", FormMethod.Post))
-    {
-        @Html.DropDownList("Id", ViewBag.LapSelectList as SelectList, new {@onchange = "this.form.submit();" })
-    }
+
+<div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+    <ul class="navbar-nav flex-grow-1">
+        <li class="nav-item">
+            <a style="font-weight: bold;" class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Lap 1</a>
+        </li>
+    </ul>
 </div>
+
+<div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+    <ul class="navbar-nav flex-grow-1">
+        <li class="nav-item">
+            <a style="font-weight: bold;" class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Lap_2">Lap 2</a>
+        </li>
+    </ul>
+</div>
+
+<div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+    <ul class="navbar-nav flex-grow-1">
+        <li class="nav-item">
+            <a style="font-weight: bold;" class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Lap_3">Lap 3</a>
+        </li>
+    </ul>
+</div>
+
 
 <div class="row">
     <br />

@@ -1,0 +1,69 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Track Data</h1>
+</div>
+
+<div class="row">
+    <br />
+</div><!-- SPACING-->
+
+<div>
+	<div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+        <ul class="navbar-nav flex-grow-1">
+            <li class="nav-item">
+                <a style="font-weight: bold;" class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Lap 1   </a>
+            </li>
+        </ul>
+    </div>
+	<div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+        <ul class="navbar-nav flex-grow-1">
+            <li class="nav-item">
+                <a style="font-weight: bold;" class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Lap_2">Lap 2   </a>
+            </li>
+        </ul>
+    </div>
+    <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+        <ul class="navbar-nav flex-grow-1">
+            <li class="nav-item">
+                <a style="font-weight: bold;" class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Lap_3">Lap 3   </a>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<div class="row">
+    <br />
+</div><!-- SPACING-->
+
+<!DOCTYPE HTML>
+<html>
+<head>
+<script>
+window.onload = function () {
+ 
+var chart = new CanvasJS.Chart("chartContainer", {
+	theme: "light2", // "light1", "light2", "dark1", "dark2"
+	animationEnabled: true,
+	zoomEnabled: true,
+	title: {
+		text: "Speed vs Lap Distance"
+	},
+	data: [{
+		type: "line",
+		dataPoints: @Html.Raw(ViewBag.DataPoints)
+	}]
+});
+ 
+chart.render();
+}
+</script>
+</head>
+<body>
+<div id="chartContainer" style="height: 370px; width: 100%;"></div>
+<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+</body>
+</html>           
+
