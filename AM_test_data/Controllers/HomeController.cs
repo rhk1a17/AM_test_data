@@ -4,10 +4,12 @@ using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Web.Helpers;
+using System.Web.Mvc;
 using AM_test_data.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 using Newtonsoft.Json;
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace AM_test_data.Controllers
 {
@@ -22,9 +24,21 @@ namespace AM_test_data.Controllers
 
         public IActionResult Index()
         {
+            ViewBag.LapSelectList = new SelectList(GetLap_Nums(), "Id", "lap_num");
+            
             testing_front_df();
             return View();
         }
+
+        private List<DropDownList> GetLap_Nums()
+        {
+            var lap_num = new List<DropDownList>();
+            lap_num.Add(new DropDownList() { Id = 1, lap_num = "Lap 1"});
+            lap_num.Add(new DropDownList() { Id = 2, lap_num = "Lap 2" });
+            lap_num.Add(new DropDownList() { Id = 3, lap_num = "Lap 3" });
+
+            return lap_num;
+        } 
 
         public IActionResult Privacy()
         {

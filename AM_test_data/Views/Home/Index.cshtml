@@ -9,6 +9,21 @@
     <p id="title" class="lead">Speed Graph</p>
 </div>
 
+<div class="row">
+    <br />
+</div><!-- SPACING-->
+
+<div>
+    @using (Html.BeginForm("Index", "Home", FormMethod.Post))
+    {
+        @Html.DropDownList("Id", ViewBag.LapSelectList as SelectList, new {@onchange = "this.form.submit();" })
+    }
+</div>
+
+<div class="row">
+    <br />
+</div><!-- SPACING-->
+
 <!DOCTYPE HTML>
 <html>
 <head>
